@@ -3,9 +3,9 @@ from celery import Celery
 from django.conf import settings
 
 # Set the default Django settings module for the 'celery' program
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'liftoff.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'referee_ally.settings')
 
-app = Celery('liftoff')
+app = Celery('referee_ally')
 
 # Configure Celery to use Django settings with the 'CELERY' namespace
 app.config_from_object('django.conf:settings', namespace='CELERY')
